@@ -10,7 +10,7 @@ const router = Router();
 
 router.get("/test", (req, res) => {
     console.log(res.json({key: 'tsad'}));
-    // res.render("index");
+    // res.render("main");
 });
 
 router.get('/Home', HomeController.index);

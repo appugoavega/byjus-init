@@ -1,7 +1,8 @@
 import Locals from '../providers/Locals';
+import { Request, Response, NextFunction } from 'express';
 
 class Home {
-	public static index(request: any, response: any, next: any): any {
+	public static index(request: Request, response: Response, next: NextFunction): any {
 		response.json({
 			message: Locals.config().name
         });
