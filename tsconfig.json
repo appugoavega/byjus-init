@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "commonjs",
+   "target": "es6",
+   "module": "commonjs",
+   "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true
+    "strict": false,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
-  "include": ["./src"],
-  "exclude": ["./src/web/frontend"]
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "./src/web/frontend"
+  ]
 }

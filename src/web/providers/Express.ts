@@ -13,8 +13,6 @@ class Express {
 	 */
 	constructor () {
 		this.express = express();
-
-		// this.mountDotEnv();
 		this.mountRoutes();
 	}
 
