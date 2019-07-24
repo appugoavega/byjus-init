@@ -32,16 +32,18 @@ class Express {
 	/**
 	 * Starts the express server
 	 */
-	public init (): any {
+	public init (): void {
 		const port: number = Locals.config().port;
 
 		// Start the server on the specified port
 		this.express.listen(port, (_error: any) => {
 			if (_error) {
-				return console.log('Error: ', _error);
+				console.log('Error: ', _error);
+				return;
 			}
-
-			return console.log('\x1b[33m%s\x1b[0m', `Server :: Running @ 'http://localhost:${port}'`);
+			console.log('\x1b[33m%s\x1b[0m', `Server :: Running @ 'http://localhost:${port}'`);
+			
+			return;
 		});
 	}
 }
