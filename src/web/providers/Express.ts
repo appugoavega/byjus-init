@@ -14,12 +14,8 @@ class Express {
 	constructor () {
 		this.express = express();
 
-		this.mountDotEnv();
+		// this.mountDotEnv();
 		this.mountRoutes();
-	}
-
-	private mountDotEnv (): void {
-		this.express = Locals.init(this.express);
 	}
 
 	/**
