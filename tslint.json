@@ -1,0 +1,23 @@
+{
+    "extends": [
+        "tslint-eslint-rules"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**/*.ts"
+        ]
+    },
+    "rules": {
+        "no-console": [
+            false
+        ],
+        "indent": [
+            true,
+            "spaces",
+            4
+        ]
+    },
+    "rulesDirectory": [
+        "node_modules/tslint-eslint-rules/dist/rules"
+    ]
+}

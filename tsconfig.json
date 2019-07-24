@@ -1,20 +1,21 @@
 {
-  "compilerOptions": {
-   "target": "es6",
-   "module": "commonjs",
-   "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": false,
-    "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
-  },
-  "include": [
-    "./src"
-  ],
-  "exclude": [
-    "./src/web/frontend"
-  ]
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src"
+    },
+    "exclude": [
+        "./src/web/frontend"
+    ],
+    "include": [
+        "./src"
+    ]
 }

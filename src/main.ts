@@ -1,16 +1,20 @@
-import * as web from "./web";
-import "reflect-metadata";
-import { createConnection } from "typeorm";
+// tslint:disable-next-line: no-import-side-effect
+import 'reflect-metadata';
+import { createConnection } from 'typeorm';
+import * as web from './web';
 
-async function main() {
-    try {
-        const connection = await createConnection();
-        connection.synchronize(true);
-        console.log('\x1b[32m%s\x1b[0m',`connection created`);
-        await web.loadServer();
-    } catch (error) {
-        console.log(error, 'sds');
-    }
-}
+const init = async (): Promise<void> =>
+    new Promise(async (resolve, reject) => {
+        try {
+            await createConnection();
+            console.log('\x1b[32m%s\x1b[0m', 'connection created');
+            web.loadServer();
+            resolve();
+        } catch (error) {
+            console.log(error, 'sds');
+            reject(error);
+        }
 
-main().catch(error => console.error(error));
+    });
+
+void init();
