@@ -11,7 +11,7 @@ const init = async (): Promise<void> =>
             web.loadServer();
             resolve();
         } catch (error) {
-            console.log(error, 'sds');
+            console.log(error);
             reject(error);
         }
 

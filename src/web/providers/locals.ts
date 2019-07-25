@@ -10,22 +10,22 @@ class Locals {
     static config(): any {
         dotenv.config({ path: path.join(__dirname, '../../../.env') });
 
-        const port = process.env.PORT || 4040;
-        const url = process.env.APP_URL || `http://localhost:${process.env.PORT}`;
-        const appSecret = process.env.APP_SECRET || 'This is your responsibility!';
-        const name = process.env.APP_NAME || 'NodeTS Dashboard';
-        const isCORSEnabled = process.env.CORS_ENABLED || true;
-        const jwtExpiresIn = process.env.JWT_EXPIRES_IN || 3;
-        const apiPrefix = process.env.API_PREFIX || 'api';
+        const PORT = process.env.PORT || 4040;
+        const URL = process.env.APP_URL || `http://localhost:${process.env.PORT}`;
+        const JWT_SECRET = process.env.JWT_SECRET || 'This is your responsibility!';
+        const NAME = process.env.APP_NAME || 'NodeTS Dashboard';
+        const IS_CORS_ENABLED = process.env.CORS_ENABLED || true;
+        const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || 3;
+        const API_PREFIX = process.env.API_PREFIX || 'api';
 
         return {
-            appSecret,
-            apiPrefix,
-            isCORSEnabled,
-            jwtExpiresIn,
-            name,
-            port,
-            url
+            JWT_SECRET,
+            API_PREFIX,
+            IS_CORS_ENABLED,
+            JWT_EXPIRES_IN,
+            NAME,
+            PORT,
+            URL
         };
     }
 

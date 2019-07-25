@@ -1,6 +1,6 @@
 {
     "extends": [
-        "tslint-eslint-rules"
+        "backend-tslint-rules"
     ],
     "linterOptions": {
         "exclude": [
