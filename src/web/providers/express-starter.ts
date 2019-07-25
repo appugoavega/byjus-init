@@ -1,3 +1,4 @@
+import * as bodyParser from 'body-parser';
 import express from 'express';
 import { Locals } from './locals';
 import { Routes } from './routes';
@@ -14,6 +15,7 @@ class ExpressStarter {
      */
     constructor() {
         this.express = express();
+        this.express.use(bodyParser.json());
         this.mountRoutes();
     }
 
@@ -21,7 +23,7 @@ class ExpressStarter {
      * Starts the express server
      */
     init(): void {
-        const port: number = Locals.config().port;
+        const port: number = Locals.config().PORT;
 
         // Start the server on the specified port
         this.express.listen(port, (_error: any) => {

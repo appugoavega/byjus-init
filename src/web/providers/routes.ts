@@ -4,7 +4,7 @@ import { Locals } from './Locals';
 
 class Routes {
     static mountApi(_express: Application): Application {
-        const apiPrefix = Locals.config().apiPrefix;
+        const apiPrefix = Locals.config().API_PREFIX;
 
         return _express.use(`/${apiPrefix}`, apiRouter);
     }

@@ -3,7 +3,7 @@ import { validate } from 'class-validator';
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 
-import { User } from '../entity/User';
+import { User } from '../entity/user';
 
 class UserController {
 
@@ -13,7 +13,7 @@ class UserController {
     const users = await userRepository.find({
       select: ['id', 'username', 'role'] // We don't want to send the passwords on response
     });
-
+    console.log(users);
     // Send the users object
     res.send(users);
   };

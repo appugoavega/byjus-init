@@ -4,7 +4,7 @@ import { Locals } from '../providers/Locals';
 class Home {
     static index = (request: Request, response: Response): any => {
         response.json({
-            message: Locals.config().name
+            message: Locals.config().NAME
         });
     };
 }

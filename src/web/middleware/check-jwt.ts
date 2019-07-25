@@ -6,14 +6,18 @@ import { Locals } from '../providers/locals';
 export const checkJwt = (req: Request, res: Response, next: NextFunction) => {
     // Get the jwt token from the head
     const token = req.headers.auth as string;
+    console.log(token);
     // let jwtPayload: { userId?: string, username?: string};
     let jwtPayload;
-
+    // jwtPayload = jwt.verify(token, Locals.config().JWT_SECRET);
+    // console.log(jwtPayload);
     // Try to validate the token and get data
     try {
         jwtPayload = jwt.verify(token, Locals.config().JWT_SECRET);
+        console.log(jwtPayload);
         res.locals.jwtPayload = jwtPayload;
     } catch (error) {
+        console.log(error);
         // If token is not valid, respond with 401 (unauthorized)
         res.status(401)
             .send();
