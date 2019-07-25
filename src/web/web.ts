@@ -1,6 +1,7 @@
-import Express from './providers/Express';
+
+import { expressStarter } from './providers/express-starter';
 
 // Start function
 export const loadServer = (): void => {
-    Express.init();
+    expressStarter.init();
 };
