@@ -9,8 +9,8 @@ import {
   UpdateDateColumn
 } from 'typeorm';
 
-@Entity()
 @Unique(['username'])
+@Entity()
 export class User {
   @PrimaryGeneratedColumn()
   id!: number;
